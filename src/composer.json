@@ -1,0 +1,50 @@
+{
+	"name": "williamisted/remotevolumeprotect",
+	"description": "Spaces, beware: Remote Volume Protect is here! This Craft CMS plugin protects your remote volumes from accidental deletions by developers on dev and staging environments. Keep your assets safe and secure.",
+	"type": "craft-plugin",
+	"version": "0.0.4",
+	"keywords": [
+		"craftcms",
+		"williamisted",
+		"remote volume protect",
+		"assets",
+		"spaces",
+		"protect",
+	],
+	"support": {
+		"docs": "https://williamisted.com/docs/plugins/craftcms/remotevolumeprotect",
+		"issues": "https://github.com/WilliamIsted/craft-remote-volume-protect/issues",
+		"source": "https://github.com/WilliamIsted/craft-remote-volume-protect",
+	},
+	"license": "proprietary",
+	"authors": [
+		{
+			"name": "William Isted",
+			"homepage": "https://github.com/WilliamIsted"
+		}
+	],
+	"require": {
+		"php": "^7.2.5",
+		"craftcms/cms": "^3.5"
+	},
+	"config": {
+		"allow-plugins": {
+      "craftcms/plugin-installer": true,
+      "yiisoft/yii2-composer": true
+    }
+	},
+	"autoload": {
+		"psr-4": {
+			"williamisted\\remotevolumeprotect\\": "src/"
+		}
+	},
+	"extra": {
+		"name": "Remote Volume Protect",
+		"handle": "remotevolumeprotect",
+		"hasCpSection": false,
+		"hasCpSettings": true,
+		"changelogUrl": "https://raw.githubusercontent.com/WilliamIsted/craft-remote-volume-protect/craft-3/CHANGELOG.md"
+		"class": "williamisted\\remotevolumeprotect\\RemoteVolumeProtect"
+	},
+  "minimum-stability": "dev"
+}
