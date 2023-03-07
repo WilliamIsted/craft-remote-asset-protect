@@ -4,13 +4,17 @@
 
 ## [1.0.0] - YYYY-MM-DD
 
-### Added
+### Pending
 
 * Initial release of the Remote Volume Protect plugin.
 * Ability to prevent deletion of assets on remote volumes in use by the production site.
-* Ability to customize the error message displayed to developers who attempt to delete protected assets.
-* Ability to exclude certain asset paths or file extensions from being protected.
-* Ability to specify which environment(s) the protection should be enabled on.
+* Ability to specify which environment(s) the protection should be disabled on. Protection is on by default for non-production sites.
+* Ability to customise the error message displayed to developers who attempt to delete protected assets.
+* Ability to block uploading and/or deletion of assets to protected volumes including on production site.
+
+### Added
+
+- None.
 
 ### Changed
 
