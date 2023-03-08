@@ -1,0 +1,36 @@
+{% import "_includes/forms" as forms %}
+
+{% set commonEnvironmentsRows = [
+    [ "dev", settings.commonEnvironments[0][1], settings.commonEnvironments[0][2], settings.commonEnvironments[0][3] ],
+    [ "staging", settings.commonEnvironments[1][1], settings.commonEnvironments[1][2], settings.commonEnvironments[1][3] ],
+    [ "<span class=\"error\" data-icon=\"alert\" aria-label=\"Error\"></span> production" | raw, settings.commonEnvironments[2][1], settings.commonEnvironments[2][2], settings.commonEnvironments[2][3] ],
+] %}
+
+{{ forms.editableTableField({
+    label: "Common Environments",
+    staticRows: true,
+    id: "commonEnvironments",
+    name: "commonEnvironments",
+    cols: [
+        { heading: "Name", type: "heading", handle: "name" },
+        { heading: "Add Volume Assets", type: "lightswitch", handle: "write" },
+        { heading: "Move Volume Assets", type: "lightswitch", handle: "move" },
+        { heading: "Delete Volume Assets", type: "lightswitch", handle: "delete" }
+    ],
+    rows: commonEnvironmentsRows
+}) }}
+
+{{ forms.editableTableField({
+    label: "Uncommon Environments",
+    staticRows: false,
+    id: "uncommonEnvironments",
+    name: "uncommonEnvironments",
+    addRowLabel: 'Add an environment',
+    cols: [
+        { heading: "Name", type: "singleline", handle: "name" },
+        { heading: "Add Volume Assets", type: "lightswitch", handle: "write" },
+        { heading: "Move Volume Assets", type: "lightswitch", handle: "move" },
+        { heading: "Delete Volume Assets", type: "lightswitch", handle: "delete" }
+    ],
+    rows: settings.uncommonEnvironments
+}) }}
