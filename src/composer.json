@@ -9,12 +9,12 @@
 		"remote volume protect",
 		"assets",
 		"spaces",
-		"protect",
+		"protect"
 	],
 	"support": {
 		"docs": "https://williamisted.com/docs/plugins/craftcms/remotevolumeprotect",
 		"issues": "https://github.com/WilliamIsted/craft-remote-volume-protect/issues",
-		"source": "https://github.com/WilliamIsted/craft-remote-volume-protect",
+		"source": "https://github.com/WilliamIsted/craft-remote-volume-protect"
 	},
 	"license": "proprietary",
 	"authors": [
@@ -43,7 +43,7 @@
 		"handle": "remotevolumeprotect",
 		"hasCpSection": false,
 		"hasCpSettings": true,
-		"changelogUrl": "https://raw.githubusercontent.com/WilliamIsted/craft-remote-volume-protect/craft-3/CHANGELOG.md"
+		"changelogUrl": "https://raw.githubusercontent.com/WilliamIsted/craft-remote-volume-protect/craft-3/CHANGELOG.md",
 		"class": "williamisted\\remotevolumeprotect\\RemoteVolumeProtect"
 	},
   "minimum-stability": "dev"
