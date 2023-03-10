@@ -26,7 +26,7 @@ To install the plugin, follow these steps:
 
 ## Credits and Acknowledgements
 
-This plugin was developed with the help of ChatGPT, a conversational AI trained by OpenAI. ChatGPT provided guidance and support throughout the development process, and we are grateful for its contributions to this project.
+This plugin was developed with the help of ChatGPT, a conversational AI trained by OpenAI. ChatGPT's assistance was used in fast-prototyping and summarising documentation, and we appriciate its contributions to this project.
 
 ## Support and Contribution
 
