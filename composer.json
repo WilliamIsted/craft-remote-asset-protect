@@ -2,7 +2,7 @@
 	"name": "williamisted/remotevolumeprotect",
 	"description": "Spaces, beware: Remote Volume Protect is here! This Craft CMS plugin protects your remote volumes from accidental deletions by developers on dev and staging environments. Keep your assets safe and secure.",
 	"type": "craft-plugin",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"keywords": [
 		"craftcms",
 		"williamisted",

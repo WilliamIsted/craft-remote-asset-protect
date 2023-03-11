@@ -13,23 +13,23 @@
     name: "commonEnvironments",
     cols: [
         { heading: "Name", type: "heading", handle: "name" },
-        { heading: "Add Remote Volume Assets", type: "lightswitch", handle: "write" },
-        { heading: "Move Remote Volume Assets", type: "lightswitch", handle: "move" },
+        { heading: "Add Remote Volume Assets", type: "lightswitch", handle: "create" },
+        { heading: "Move Remote Volume Assets", type: "lightswitch", handle: "update" },
         { heading: "Delete Remote Volume Assets", type: "lightswitch", handle: "delete" }
     ],
     rows: commonEnvironmentsRows
 }) }}
 
 {{ forms.editableTableField({
-    label: "Uncommon Environments",
+    label: "Additional Environments",
     staticRows: false,
     id: "uncommonEnvironments",
     name: "uncommonEnvironments",
     addRowLabel: 'Add an environment',
     cols: [
         { heading: "Name", type: "singleline", handle: "name" },
-        { heading: "Add Remote Volume Assets", type: "lightswitch", handle: "write" },
-        { heading: "Move Remote Volume Assets", type: "lightswitch", handle: "move" },
+        { heading: "Add Remote Volume Assets", type: "lightswitch", handle: "create" },
+        { heading: "Move Remote Volume Assets", type: "lightswitch", handle: "update" },
         { heading: "Delete Remote Volume Assets", type: "lightswitch", handle: "delete" }
     ],
     rows: settings.uncommonEnvironments
