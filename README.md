@@ -7,6 +7,7 @@ Keep your assets safe and secure.
 ## Requirements
 
 - Craft CMS 3.x.
+- PHP 7.2.5+
 
 ## Installation
 
@@ -22,7 +23,7 @@ To install the plugin, follow these steps:
 
 ## Screenshots
 
-
+![Settings page for Remote Volume Protect showing toggle switches for environment permissions](https://raw.githubusercontent.com/WilliamIsted/craft-remote-volume-protect/craft-3/.github/SCREENSHOTS/settings_001.png "Plugin settings page in Craft CMS")
 
 ## Credits and Acknowledgements
 
