@@ -203,7 +203,7 @@ class RemoteVolumeProtect extends craft\base\Plugin
 
     protected function settingsHtml(): string
     {
-        return Craft::$app->getView()->renderTemplate('remotevolumeprotect/settings', [
+        return Craft::$app->getView()->renderTemplate('remotevolumeprotect/_settings', [
             'settings' => $this->getSettings(),
         ]);
     }
