@@ -1,5 +1,7 @@
 # Remote Volume Protect for Craft CMS
 
+<img alt="Icon of a red shield containing a padlock depicting an asset being locked" width="100" src="https://raw.githubusercontent.com/WilliamIsted/craft-remote-volume-protect/craft-3/src/icon.svg">
+
 Spaces, beware: Remote Volume Protect is here! This Craft CMS plugin protects your remote volumes from accidental deletions by developers on dev and staging environments.
 
 Keep your assets safe and secure.
