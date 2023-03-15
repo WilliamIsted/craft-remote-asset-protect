@@ -1,20 +1,20 @@
 {
-	"name": "williamisted/remotevolumeprotect",
-	"description": "Spaces, beware: Remote Volume Protect is here! This Craft CMS plugin protects your remote volumes from accidental deletions by developers on dev and staging environments. Keep your assets safe and secure.",
+	"name": "williamisted/remoteassetprotect",
+	"description": "Never accidentally delete assets again. Spaces, beware: Remote Asset Protect is here! This Craft CMS plugin protects your remote assets from accidental deletion by developers on dev, staging and other environments. Keep your assets safe and secure.",
 	"type": "craft-plugin",
-	"version": "0.0.8-beta",
+	"version": "0.0.9-beta",
 	"keywords": [
 		"craftcms",
 		"williamisted",
-		"remote volume protect",
+		"remote asset protect",
 		"assets",
 		"spaces",
 		"protect"
 	],
 	"support": {
-		"docsx": "https://williamisted.com/docs/plugins/craftcms/remote-volume-protect",
-		"issues": "https://github.com/WilliamIsted/craft-remote-volume-protect/issues",
-		"source": "https://github.com/WilliamIsted/craft-remote-volume-protect"
+		"docsx": "https://williamisted.com/docs/plugins/craftcms/remote-asset-protect",
+		"issues": "https://github.com/WilliamIsted/craft-remote-asset-protect/issues",
+		"source": "https://github.com/WilliamIsted/craft-remote-asset-protect"
 	},
 	"license": "proprietary",
 	"authors": [
@@ -35,16 +35,15 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"williamisted\\remotevolumeprotect\\": "src/"
+			"williamisted\\remoteassetprotect\\": "src/"
 		}
 	},
 	"extra": {
-		"name": "Remote Volume Protect",
-		"handle": "remotevolumeprotect",
+		"name": "Remote Asset Protect",
+		"handle": "remoteassetprotect",
 		"hasCpSection": false,
 		"hasCpSettings": true,
-		"changelogUrl": "https://raw.githubusercontent.com/WilliamIsted/craft-remote-volume-protect/craft-3/CHANGELOG.md",
-		"class": "williamisted\\remotevolumeprotect\\RemoteVolumeProtect"
-	},
-  "minimum-stability": "dev"
+		"changelogUrl": "https://raw.githubusercontent.com/WilliamIsted/craft-remote-asset-protect/craft-3/CHANGELOG.md",
+		"class": "williamisted\\remoteassetprotect\\RemoteAssetProtect"
+	}
 }

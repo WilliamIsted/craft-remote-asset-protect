@@ -1,5 +1,5 @@
 <?php
-namespace williamisted\remotevolumeprotect\models;
+namespace williamisted\remoteassetprotect\models;
 
 use craft\base\Model;
 

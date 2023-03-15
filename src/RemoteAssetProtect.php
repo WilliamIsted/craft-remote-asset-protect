@@ -1,5 +1,5 @@
 <?php
-namespace williamisted\remotevolumeprotect;
+namespace williamisted\remoteassetprotect;
 
 use Craft;
 use craft\elements\Asset;
@@ -10,9 +10,9 @@ use craft\services\Volumes;
 use craft\web\twig\variables\CraftVariable;
 use yii\base\Event;
 
-use williamisted\remotevolumeprotect\models\Settings;
+use williamisted\remoteassetprotect\models\Settings;
 
-class RemoteVolumeProtect extends craft\base\Plugin
+class RemoteAssetProtect extends craft\base\Plugin
 {
     public $settingsSchema = '1.0.0';
 
@@ -49,7 +49,7 @@ class RemoteVolumeProtect extends craft\base\Plugin
         $this->commonEnvironments[1][0] = 'staging';
         $this->commonEnvironments[2][0] = 'production';
 
-        $this->uncommonEnvironments = $this->getSettings()->uncommonEnvironments;
+        $this->uncommonEnvironments = $this->getSettings()->uncommonEnvironments ?: [];
 
         foreach ( array_merge( $this->commonEnvironments, $this->uncommonEnvironments ) as $env ) {
             $this->environments[ $env[0] ] = $env;
@@ -61,7 +61,7 @@ class RemoteVolumeProtect extends craft\base\Plugin
             function (craft\events\PluginEvent $event) {
                 
                 // Respect existing project config.
-                if ( Craft::$app->projectConfig->get('plugins.remotevolumeprotect', true) === null ) {
+                if ( Craft::$app->projectConfig->get('plugins.remoteassetprotect', true) === null ) {
                     $this->initSettings = true;
                 }
 
@@ -73,7 +73,7 @@ class RemoteVolumeProtect extends craft\base\Plugin
             Plugins::EVENT_AFTER_INSTALL_PLUGIN,
             function (craft\events\PluginEvent $event) {
 
-                if ('remotevolumeprotect' === $event->plugin->handle) {
+                if ('remoteassetprotect' === $event->plugin->handle) {
                 
                     // Was existing project config found? Should plugin initialize defaults
                     if ( $this->initSettings ) {
@@ -203,7 +203,7 @@ class RemoteVolumeProtect extends craft\base\Plugin
 
     protected function settingsHtml(): string
     {
-        return Craft::$app->getView()->renderTemplate('remotevolumeprotect/_settings', [
+        return Craft::$app->getView()->renderTemplate('remoteassetprotect/_settings', [
             'settings' => $this->getSettings(),
         ]);
     }
