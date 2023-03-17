@@ -11,7 +11,7 @@ class Settings extends Model
     public $commonEnvironments;
     public $uncommonEnvironments;
 
-    public function rules()
+    public function rules(): array
     {
         return [];
     }
