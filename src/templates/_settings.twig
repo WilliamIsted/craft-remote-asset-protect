@@ -8,7 +8,7 @@
 
 {{ forms.editableTableField({
     label: "Common Environments",
-    staticRows: true,
+    staticRows: false,
     id: "commonEnvironments",
     name: "commonEnvironments",
     cols: [
@@ -23,6 +23,8 @@
 {{ forms.editableTableField({
     label: "Additional Environments",
     staticRows: false,
+    allowAdd: true,
+    allowDelete: true,
     id: "uncommonEnvironments",
     name: "uncommonEnvironments",
     addRowLabel: 'Add an environment',
