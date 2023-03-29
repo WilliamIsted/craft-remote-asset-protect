@@ -2,7 +2,7 @@
 	"name": "williamisted/remoteassetprotect",
 	"description": "Never accidentally delete assets again. Spaces, beware: Remote Asset Protect is here! This Craft CMS plugin protects your remote assets from accidental deletion by developers on dev, staging and other environments. Keep your assets safe and secure.",
 	"type": "craft-plugin",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"keywords": [
 		"craftcms",
 		"williamisted",

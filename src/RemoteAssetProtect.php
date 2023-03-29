@@ -104,7 +104,7 @@ class RemoteAssetProtect extends \craft\base\Plugin
       function(ModelEvent $event) {
 
         // Only consider deletion if ModelEvent, and is not a typical local volume
-        if ( $event instanceof ModelEvent && !$event->sender->getVolume() instanceof craft\volumes\Local ) {
+        if ( $event instanceof ModelEvent && !$event->sender->getVolume()->getFs() instanceof craft\fs\Local ) {
 
           if ( in_array( $event->sender->getScenario(), [ ASSET::SCENARIO_CREATE, ASSET::SCENARIO_REPLACE ] ) ) {
            
@@ -142,11 +142,11 @@ class RemoteAssetProtect extends \craft\base\Plugin
           preg_match( '/\{folder:(\d+)\}/', $event->sender->newLocation, $matches );
           $folderId = $matches[1];
 
-          $volumeFrom = $event->sender->getVolume();
-          $volumeTo   = Craft::$app->getAssets()->getFolderById( $folderId )->getVolume();
+          $volumeFrom = $event->sender->getVolume()->getFs();
+          $volumeTo   = Craft::$app->getAssets()->getFolderById( $folderId )->getVolume()->getFs();
 
           // Only run if asset is moving from or to a non-local folder
-          if ( $volumeFrom instanceof craft\volumes\Local && $volumeTo instanceof craft\volumes\Local ) {
+          if ( $volumeFrom instanceof craft\fs\Local && $volumeTo instanceof craft\fs\Local ) {
             return true;
           }
 
@@ -174,8 +174,10 @@ class RemoteAssetProtect extends \craft\base\Plugin
       Asset::EVENT_BEFORE_DELETE,
       function(ModelEvent $event) {
 
+        $event->sender->keepFileOnDelete = true;
+
         // Only consider deletion if ModelEvent, and is not a typical local volume
-        if ( $event instanceof ModelEvent && !$event->sender->getVolume() instanceof craft\volumes\Local ) {
+        if ( $event instanceof ModelEvent && !$event->sender->getVolume()->getFs() instanceof craft\fs\Local ) {
 
           $canDelete = false;
 
